@@ -1,0 +1,30 @@
+# -------------------------------
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# -------------------------------
+# Virtual environment
+venv/
+
+# -------------------------------
+# Model outputs (FaceNet templates, SVMs)
+models/*.pkl
+
+# -------------------------------
+# Dataset and captured images
+# Exclude all JPG/PNG files under models/data (your face dataset)
+models/data/**/*.jpg
+models/data/**/*.jpeg
+models/data/**/*.png
+
+# -------------------------------
+# Temporary or system files
+.DS_Store
+Thumbs.db
+.env
+*.bak
+*.tmp
