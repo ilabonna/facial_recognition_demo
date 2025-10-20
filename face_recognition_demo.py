@@ -187,7 +187,8 @@ def recognize(args):
         raise RuntimeError("No model found. Train first.")
 
     print(f"[INFO] Using template verification. threshold={thr:.4f}")
-
+    
+ # Open webcam
     cap = cv2.VideoCapture(int(args.camera_index))
     if not cap.isOpened():
         raise RuntimeError(f"Cannot open camera index {args.camera_index}")
@@ -208,6 +209,7 @@ def recognize(args):
                 face = preprocess_face(crop_rgb)
                 emb = pipeline.embed_many([face])[0]
 
+                    # Predict if recognized or not
                 lab, score, dist = predict_template(centroid, thr, emb)
                 if lab == "Unknown":
                     draw_box(frame, (x, y, w, h), "NOT RECOGNIZED", score)
