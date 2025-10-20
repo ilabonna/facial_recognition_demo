@@ -1,7 +1,9 @@
-keras-facenet
-mtcnn
-opencv-python
-numpy
-scikit-learn
-tensorflow
-keras
+keras-facenet   # Loads a pretrained FaceNet model built on TensorFlow/Keras to generate 512-dimensional face embeddings for recognition
+mtcnn           # Multi-task Cascaded Convolutional Neural Network used for accurate face detection (locating faces and keypoints)
+opencv-python   # OpenCV bindings for Python; handles webcam access, frame capture, image display, cropping, and drawing boxes
+numpy           # Core numerical library; performs vector normalization, distance calculations, and array operations on embeddings
+scikit-learn    # Machine-learning toolkit; used to train and apply an SVM classifier when recognizing multiple users
+tensorflow      # Deep-learning engine that runs Keras-FaceNet’s model computations (tensors, GPU/CPU acceleration)
+keras           # High-level neural-network API that interfaces with TensorFlow; backend dependency for keras-facenet
+
+
